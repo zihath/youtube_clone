@@ -1,0 +1,95 @@
+nav {
+    padding: 10px 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: rgb(223, 241, 235);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .menu-icon {
+    width: 22px;
+    margin-right: 25px;
+}
+
+.nav-left .logo {
+    width: 130px;
+}
+
+.nav-middle {
+    display: flex;
+    justify-content: center; /* Center the search box */
+    flex: 1; /* Take up remaining space */
+    margin: 0 20px; /* Add some margin for spacing */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 600px; /* Limit the width of the search box */
+    width: 100%; /* Take up available width */
+    border: 1px solid #ccc; /* Add border to the entire search box */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Ensure child elements stay within the box */
+}
+
+.search-box input {
+    flex: 1; /* Take up remaining space */
+    padding: 8px;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    background: transparent; /* Transparent background */
+}
+
+.search-box button {
+    padding: 8px 12px 8px 8px; /* Adjust padding: top, right, bottom, left */
+    border: none; /* Remove border */
+    background: #f8f8f8; /* Background color */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box button img {
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+    margin-right: 4px; /* Move the icon slightly to the left */
+}
+
+.nav-right img{
+    width: 25px;
+    margin-right: 25px;
+}
+
+.nav-right .user-icon{
+    width: 35px;
+    border-radius: 50%;
+}
+
+@media(max-width:900px){
+    .menu-icon{
+        display: none;
+    }
+    .nav-right img{
+        display: none;
+    }
+    .nav-right .user-icon{
+        display: block;
+        width: 30;
+    }
+    .logo{
+        width: 90px;
+    }
+    .nav-middle .search-box input{
+        width: 100px;
+    }
+}

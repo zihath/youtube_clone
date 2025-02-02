@@ -1,0 +1,92 @@
+.sidebar {
+    width: 210px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #ffffff; /* White background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on the right */
+    padding: 20px 15px; /* Padding for spacing */
+    position: fixed; /* Fixed position to stay on the left */
+    top: 40px;
+    left: 0;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  .sortcut-links,
+  .subscribed-list {
+    margin-left: -4px;
+    margin-bottom: 20px; /* Space between sections */
+  }
+  
+  .sortcut-links hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0; /* Light gray line */
+    margin: 15px 0; /* Space above and below the line */
+  }
+  
+  .side-link {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px 15px; /* Padding for each link */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .side-link:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+  }
+  
+  .side-link img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    margin-right: 15px; /* Space between icon and text */
+  }
+  
+  .side-link p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Text size */
+    color: #030303; /* Dark gray text color */
+    font-weight: 500; /* Medium font weight */
+  }
+  
+  .subscribed-list h3 {
+    font-size: 16px; /* Heading size */
+    color: #606060; /* Gray text color */
+    margin-bottom: 15px; /* Space below the heading */
+    font-weight: 500; /* Medium font weight */
+    margin-left: 18px;
+  }
+
+  .subscribed-list img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .small-sidebar{
+    width: 6%;
+  }
+  .small-sidebar p{
+  display: none;
+  }
+  .small-sidebar h3{
+    display: none;
+  }
+
+  .small-sidebar hr{
+    width: 50%;
+    margin-bottom: 25px;
+    margin-left: 15px;
+  }
+
+  .side-link.active img{
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
+  }
+
+  @media (max-width:900px) {
+    .sidebar{
+      display: none;
+    }
+    
+  }

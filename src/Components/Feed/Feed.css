@@ -1,0 +1,54 @@
+.feed{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 16px;
+
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+  
+.grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h2 {
+    color: black;
+    font-size: 18px;  /* Adjust as needed */
+    font-weight: 600;
+    width: 100%;       /* Ensure it doesn't overflow */
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;  /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds "..." for overflow */
+  }
+  
+  /* For smaller screens, adjust font size */
+  
+  
+
+.card h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(91, 86, 86);
+    margin: 6px 0;
+}
+
+.card p{
+    font-size: 14px;
+    color: gray;
+}
+
+
+@media (max-width: 768px) {
+    .card h2 {
+      font-size: 14px;
+    }
+  }

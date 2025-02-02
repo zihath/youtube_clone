@@ -1,0 +1,42 @@
+.recommended{
+    flex-basis: 30%;
+    margin: auto;
+    gap: 10px; /* Spacing between items */
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.side-video-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.side-video-list img{
+    flex-basis: 49%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.vid-info{
+    flex-basis: 49%;
+}
+
+.vid-info h4{
+    color: rgb(70, 65, 57);
+    font-size: 15px;
+    margin-bottom:10px;
+}
+
+.vid-info p{
+    
+    font-size: 13px;
+    color: rgb(94, 90, 82);
+    margin: auto;
+}
+
+@media(max-width : 900px){
+    .recommended{
+        flex-basis: 100%;
+    }
+}

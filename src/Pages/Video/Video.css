@@ -1,0 +1,17 @@
+.play-container{
+    display: flex;
+}
+
+@media(max-width:900px){
+    .play-container {
+        
+        margin-right: 10px;
+        flex-direction: column; /* Stack elements */
+        gap: 10px;
+      }
+    
+      .play-container .recommended {
+        min-width: 100%; /* Full width */
+        margin-left: 10px;
+      }
+}
