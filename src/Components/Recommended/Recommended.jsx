@@ -10,7 +10,7 @@ const Recommended = ({categoryId}) => {
 
   const RecommendedVideoData = async () => {
       try {
-        const relatedVideo_url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=45&videoCategoryId=${categoryId}&key=${API_KEY}`;
+        const relatedVideo_url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&regionCode=IN&maxResults=45&videoCategoryId=${categoryId}&key=${API_KEY}`;
   
         const response = await fetch(relatedVideo_url);
         if (!response.ok) throw new Error("Failed to fetch video data");

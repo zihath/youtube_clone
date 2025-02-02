@@ -11,6 +11,7 @@ import moment from 'moment'
 
 const Feed = ({category}) => {
 
+    const [hovervideo , setHovervideo] = useState(null);
     const [data , setData] = useState([]);
 
     const fetchData = async()=>{
@@ -27,12 +28,30 @@ const Feed = ({category}) => {
     <div className="feed">
         {data.map((items , index)=>{
             return(
-                <Link to = {`video/${items.snippet.categoryId}/${items.id}`}className='card'>
-                <img src={items.snippet.thumbnails.medium.url} alt="" />
-                <h2>{items.snippet.title}</h2>
-                <h3>{items.snippet.channelTitle}</h3>
-                <p>{value_converter(items.statistics.viewCount)} views &bull; {moment(items.snippet.publishedAt).fromNow()}</p>
-            </Link>
+                <Link 
+                to = {`video/${items.snippet.categoryId}/${items.id}`}className='card'
+                key = {index}
+                onMouseEnter={()=>setHovervideo(index)}
+                onMouseLeave={()=>setHovervideo(null)}
+                >
+                    <div className="video-thumbnail">
+                        {hovervideo === index ? (
+                            <iframe 
+                            src={`https://www.youtube.com/embed/${items.id}?autoplay=1&mute=1&controls=0&loop=1&playlist=${items.id}`}  
+                            frameBorder="0" 
+                            allow="autoplay; encrypted-media; picture-in-picture" 
+                            allowFullScreen
+                            className="preview-video"
+                          />
+                        ):(
+                            <img src={items.snippet.thumbnails.medium.url} alt="" />
+                        )}
+                    </div>
+
+                    <h2>{items.snippet.title}</h2>
+                    <h3>{items.snippet.channelTitle}</h3>
+                    <p>{value_converter(items.statistics.viewCount)} views &bull; {moment(items.snippet.publishedAt).fromNow()}</p>
+                </Link>
             )
         })}
         
