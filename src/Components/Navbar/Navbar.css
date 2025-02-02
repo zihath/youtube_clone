@@ -22,6 +22,9 @@ nav {
 
 .nav-left .logo {
     width: 130px;
+    height: 40px; /* Set the height of the image */
+    object-fit: cover; /* This makes the image fill the space, zooming in if needed */
+    object-position: center; /* This ensures the image is centered */
 }
 
 .nav-middle {
